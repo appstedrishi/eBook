@@ -1,0 +1,180 @@
+<html>
+<head>
+<title>Foreign-DNA</title>
+<script type="text/javascript" src="../javascript/halo-common.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/halo-common.css"/>
+<link rel="stylesheet" href="../css/glossary.css" type="text/css" />
+<script type="text/javascript" src="../javascript/raphael-min.js"></script>
+<script type="text/javascript" src="../javascript/dracula_graffle.js"></script>
+<script type="text/javascript" src="../javascript/dracula_graph.js"></script>
+    <script type="text/javascript">
+<!--
+var redraw;
+window.onload = function() {
+    /* Custom node renderer for child concept nodes */
+    var relationRender = function(r, n) {
+            /* the Raphael set is obligatory, containing all you want to display */
+            var set = r.set().push(
+                /* custom objects go here */
+                r.rect(n.point[0]-30, n.point[1]-10, 60, 20).attr({"fill": "#ffffff", "stroke": "#ffffff", "stroke-width" : "0px" })).push(
+                r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+            return set;
+        };
+    /* create graph nodes and passing the new renderer function to overwrite the default one */
+    var g = new Graph();
+    g.addNode("37709", { label:"foreign dna", numLines:1, url:"Foreign-DNA_RelationGraph.html", render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-70, n.point[1]-28, 140, 57).attr({"fill":"270-#e7e8ea-#b7bbc2", r : "10px", "stroke-width" :  "2", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"17px"}));
+    return set;
+}});
+    g.addNode("37712", { label:"carbon", numLines:1, url:false, render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-20, 100, 40).attr({"fill":"#e6e7eb", r : "4px", "stroke-width" :  "1", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addNode("37715", { label:"DNA strand", numLines:1, url:"DNA-Strand_RelationGraph.html", render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-20, 100, 40).attr({"fill":"270-#e7e8ea-#b7bbc2", r : "4px", "stroke-width" :  "2", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addNode("37718", { label:"DNA strand", numLines:1, url:"DNA-Strand_RelationGraph.html", render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-20, 100, 40).attr({"fill":"270-#e7e8ea-#b7bbc2", r : "4px", "stroke-width" :  "2", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addNode("37721", { label:"monomer and\nnucleotide", numLines:2, url:false, render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-26, 100, 53).attr({"fill":"#e6e7eb", r : "4px", "stroke-width" :  "1", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addNode("37724", { label:"deoxyribose", numLines:1, url:"Deoxyribose_RelationGraph.html", render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-20, 100, 40).attr({"fill":"270-#e7e8ea-#b7bbc2", r : "4px", "stroke-width" :  "2", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addNode("37727", { label:"deoxyribonucleoside\nmonophosphate", numLines:2, url:"Deoxyribonucleoside-Monophosphate_RelationGraph.html", render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-26, 100, 53).attr({"fill":"270-#e7e8ea-#b7bbc2", r : "4px", "stroke-width" :  "2", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addNode("37730", { label:"monomer and\ndeoxyribonucleoside\nmonophosphate", numLines:3, url:false, render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-33, 100, 66).attr({"fill":"#e6e7eb", r : "4px", "stroke-width" :  "1", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addNode("37733", { label:"monomer and\ndeoxyribonucleoside\nmonophosphate", numLines:3, url:false, render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-33, 100, 66).attr({"fill":"#e6e7eb", r : "4px", "stroke-width" :  "1", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addNode("37719", { isRelationNode:true, label: "has parts", url:"", render:relationRender});
+    g.addEdge("37718", "37719", {stroke : "#3D424F"});
+    g.addEdge("37719", "37721", {directed: true, stroke : "#3D424F"});
+    g.addEdge("37719", "37724", {directed: true, stroke : "#3D424F"});
+    g.addEdge("37719", "37727", {directed: true, stroke : "#3D424F"});
+    g.addEdge("37719", "37730", {directed: true, stroke : "#3D424F"});
+    g.addEdge("37719", "37733", {directed: true, stroke : "#3D424F"});
+    g.addNode("37736", { label:"atom", numLines:1, url:false, render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-20, 100, 40).attr({"fill":"#e6e7eb", r : "4px", "stroke-width" :  "1", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addNode("37739", { label:"monomer", numLines:1, url:"Monomer_RelationGraph.html", render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-20, 100, 40).attr({"fill":"270-#e7e8ea-#b7bbc2", r : "4px", "stroke-width" :  "2", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addNode("37742", { label:"nucleoside\nmonophosphate\nand monomer", numLines:3, url:false, render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-33, 100, 66).attr({"fill":"#e6e7eb", r : "4px", "stroke-width" :  "1", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addNode("37745", { label:"nucleoside", numLines:1, url:"Nucleoside_RelationGraph.html", render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-20, 100, 40).attr({"fill":"270-#e7e8ea-#b7bbc2", r : "4px", "stroke-width" :  "2", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addNode("37743", { isRelationNode:true, label: "has parts", url:"", render:relationRender});
+    g.addEdge("37742", "37743", {stroke : "#3D424F"});
+    g.addEdge("37743", "37745", {directed: true, stroke : "#3D424F"});
+    g.addNode("37710", { isRelationNode:true, label: "has parts", url:"", render:relationRender});
+    g.addEdge("37709", "37710", {stroke : "#3D424F"});
+    g.addEdge("37710", "37712", {directed: true, stroke : "#3D424F"});
+    g.addEdge("37710", "37715", {directed: true, stroke : "#3D424F"});
+    g.addEdge("37710", "37718", {directed: true, stroke : "#3D424F"});
+    g.addEdge("37710", "37736", {directed: true, stroke : "#3D424F"});
+    g.addEdge("37710", "37739", {directed: true, stroke : "#3D424F"});
+    g.addEdge("37710", "37742", {directed: true, stroke : "#3D424F"});
+    g.addNode("37711", { isRelationNode:true, isScNode:true, label: "is a", url:"", render:relationRender});
+    g.addEdge("37709", "37711", {isScEdge:true, directed: true, stroke : "#3D424F"});
+    g.addNode("37748", { isScNode:true, label:"DNA", numLines:1, url:"DNA_RelationGraph.html", render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-20, 100, 40).attr({"fill":"270-#e7e8ea-#b7bbc2", r : "4px", "stroke-width" :  "2", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addEdge("37711", "37748", { isScEdge:true, directed: true, stroke : "#3D424F"});
+    /* layout the graph using the Spring layout implementation */
+    var layouter = new Graph.Layout.Spring(g);
+   layouter.layout();
+    /* draw the graph using the RaphaelJS draw implementation */
+    var renderer = new Graph.Renderer.Raphael('canvas', g);  
+    renderer.draw();
+};
+-->
+    </script>
+</head>
+<body class="cmap">
+  <div class="glossary-page cmap">
+     <div id="cmap-toggle">
+       <div id="hide-cmap"><a href="Foreign-DNA.html">definition</a></div>
+       <div id="show-cmap" class="pushed"><a href="Foreign-DNA_RelationGraph.html">concept map</a></div>
+     </div>
+     <h2>Foreign-DNA</h2>
+     <center>
+       <div id="canvas"></div>
+     </center>
+  </div>
+</body>
+</html>

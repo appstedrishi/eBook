@@ -1,0 +1,184 @@
+<html>
+<head>
+<title>Glucose</title>
+<script type="text/javascript" src="../javascript/halo-common.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/halo-common.css"/>
+<link rel="stylesheet" href="../css/glossary.css" type="text/css" />
+<script type="text/javascript" src="../javascript/raphael-min.js"></script>
+<script type="text/javascript" src="../javascript/dracula_graffle.js"></script>
+<script type="text/javascript" src="../javascript/dracula_graph.js"></script>
+    <script type="text/javascript">
+<!--
+var redraw;
+window.onload = function() {
+    /* Custom node renderer for child concept nodes */
+    var relationRender = function(r, n) {
+            /* the Raphael set is obligatory, containing all you want to display */
+            var set = r.set().push(
+                /* custom objects go here */
+                r.rect(n.point[0]-30, n.point[1]-10, 60, 20).attr({"fill": "#ffffff", "stroke": "#ffffff", "stroke-width" : "0px" })).push(
+                r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+            return set;
+        };
+    /* create graph nodes and passing the new renderer function to overwrite the default one */
+    var g = new Graph();
+    g.addNode("41453", { label:"glucose", numLines:1, url:"Glucose_RelationGraph.html", render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-70, n.point[1]-28, 140, 57).attr({"fill":"270-#e7e8ea-#b7bbc2", r : "10px", "stroke-width" :  "2", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"17px"}));
+    return set;
+}});
+    g.addNode("41456", { label:"oxygen", numLines:1, url:false, render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-20, 100, 40).attr({"fill":"#e6e7eb", r : "4px", "stroke-width" :  "1", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addNode("41459", { label:"valence\nelectron", numLines:2, url:"Valence-Electron_RelationGraph.html", render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-26, 100, 53).attr({"fill":"270-#e7e8ea-#b7bbc2", r : "4px", "stroke-width" :  "2", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addNode("41462", { label:"proton", numLines:1, url:"Proton_RelationGraph.html", render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-20, 100, 40).attr({"fill":"270-#e7e8ea-#b7bbc2", r : "4px", "stroke-width" :  "2", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addNode("41457", { isRelationNode:true, label: "has parts", url:"", render:relationRender});
+    g.addEdge("41456", "41457", {stroke : "#3D424F"});
+    g.addEdge("41457", "41459", {directed: true, stroke : "#3D424F"});
+    g.addEdge("41457", "41462", {directed: true, stroke : "#3D424F"});
+    g.addNode("41465", { label:"oxygen", numLines:1, url:false, render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-20, 100, 40).attr({"fill":"#e6e7eb", r : "4px", "stroke-width" :  "1", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addNode("41468", { label:"proton", numLines:1, url:"Proton_RelationGraph.html", render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-20, 100, 40).attr({"fill":"270-#e7e8ea-#b7bbc2", r : "4px", "stroke-width" :  "2", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addNode("41471", { label:"valence\nelectron", numLines:2, url:"Valence-Electron_RelationGraph.html", render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-26, 100, 53).attr({"fill":"270-#e7e8ea-#b7bbc2", r : "4px", "stroke-width" :  "2", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addNode("41466", { isRelationNode:true, label: "has parts", url:"", render:relationRender});
+    g.addEdge("41465", "41466", {stroke : "#3D424F"});
+    g.addEdge("41466", "41468", {directed: true, stroke : "#3D424F"});
+    g.addEdge("41466", "41471", {directed: true, stroke : "#3D424F"});
+    g.addNode("41474", { label:"hydrogen", numLines:1, url:false, render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-20, 100, 40).attr({"fill":"#e6e7eb", r : "4px", "stroke-width" :  "1", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addNode("41477", { label:"proton", numLines:1, url:"Proton_RelationGraph.html", render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-20, 100, 40).attr({"fill":"270-#e7e8ea-#b7bbc2", r : "4px", "stroke-width" :  "2", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addNode("41480", { label:"valence\nelectron", numLines:2, url:"Valence-Electron_RelationGraph.html", render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-26, 100, 53).attr({"fill":"270-#e7e8ea-#b7bbc2", r : "4px", "stroke-width" :  "2", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addNode("41475", { isRelationNode:true, label: "has parts", url:"", render:relationRender});
+    g.addEdge("41474", "41475", {stroke : "#3D424F"});
+    g.addEdge("41475", "41477", {directed: true, stroke : "#3D424F"});
+    g.addEdge("41475", "41480", {directed: true, stroke : "#3D424F"});
+    g.addNode("41483", { label:"carbon", numLines:1, url:false, render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-20, 100, 40).attr({"fill":"#e6e7eb", r : "4px", "stroke-width" :  "1", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addNode("41486", { label:"proton", numLines:1, url:"Proton_RelationGraph.html", render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-20, 100, 40).attr({"fill":"270-#e7e8ea-#b7bbc2", r : "4px", "stroke-width" :  "2", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addNode("41489", { label:"valence\nelectron", numLines:2, url:"Valence-Electron_RelationGraph.html", render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-26, 100, 53).attr({"fill":"270-#e7e8ea-#b7bbc2", r : "4px", "stroke-width" :  "2", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addNode("41484", { isRelationNode:true, label: "has parts", url:"", render:relationRender});
+    g.addEdge("41483", "41484", {stroke : "#3D424F"});
+    g.addEdge("41484", "41486", {directed: true, stroke : "#3D424F"});
+    g.addEdge("41484", "41489", {directed: true, stroke : "#3D424F"});
+    g.addNode("41454", { isRelationNode:true, label: "has parts", url:"", render:relationRender});
+    g.addEdge("41453", "41454", {stroke : "#3D424F"});
+    g.addEdge("41454", "41456", {directed: true, stroke : "#3D424F"});
+    g.addEdge("41454", "41465", {directed: true, stroke : "#3D424F"});
+    g.addEdge("41454", "41474", {directed: true, stroke : "#3D424F"});
+    g.addEdge("41454", "41483", {directed: true, stroke : "#3D424F"});
+    g.addNode("41455", { isRelationNode:true, isScNode:true, label: "is a", url:"", render:relationRender});
+    g.addEdge("41453", "41455", {isScEdge:true, directed: true, stroke : "#3D424F"});
+    g.addNode("41492", { isScNode:true, label:"aldose", numLines:1, url:"Aldose_RelationGraph.html", render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-20, 100, 40).attr({"fill":"270-#e7e8ea-#b7bbc2", r : "4px", "stroke-width" :  "2", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addEdge("41455", "41492", { isScEdge:true, directed: true, stroke : "#3D424F"});
+    /* layout the graph using the Spring layout implementation */
+    var layouter = new Graph.Layout.Spring(g);
+   layouter.layout();
+    /* draw the graph using the RaphaelJS draw implementation */
+    var renderer = new Graph.Renderer.Raphael('canvas', g);  
+    renderer.draw();
+};
+-->
+    </script>
+</head>
+<body class="cmap">
+  <div class="glossary-page cmap">
+     <div id="cmap-toggle">
+       <div id="hide-cmap"><a href="Glucose.html">definition</a></div>
+       <div id="show-cmap" class="pushed"><a href="Glucose_RelationGraph.html">concept map</a></div>
+     </div>
+     <h2>Glucose</h2>
+     <center>
+       <div id="canvas"></div>
+     </center>
+  </div>
+</body>
+</html>

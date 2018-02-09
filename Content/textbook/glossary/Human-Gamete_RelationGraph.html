@@ -1,0 +1,424 @@
+<html>
+<head>
+<title>Human-Gamete</title>
+<script type="text/javascript" src="../javascript/halo-common.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/halo-common.css"/>
+<link rel="stylesheet" href="../css/glossary.css" type="text/css" />
+<script type="text/javascript" src="../javascript/raphael-min.js"></script>
+<script type="text/javascript" src="../javascript/dracula_graffle.js"></script>
+<script type="text/javascript" src="../javascript/dracula_graph.js"></script>
+    <script type="text/javascript">
+<!--
+var redraw;
+window.onload = function() {
+    /* Custom node renderer for child concept nodes */
+    var relationRender = function(r, n) {
+            /* the Raphael set is obligatory, containing all you want to display */
+            var set = r.set().push(
+                /* custom objects go here */
+                r.rect(n.point[0]-30, n.point[1]-10, 60, 20).attr({"fill": "#ffffff", "stroke": "#ffffff", "stroke-width" : "0px" })).push(
+                r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+            return set;
+        };
+    /* create graph nodes and passing the new renderer function to overwrite the default one */
+    var g = new Graph();
+    g.addNode("46580", { label:"human gamete", numLines:1, url:"Human-Gamete_RelationGraph.html", render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-70, n.point[1]-28, 140, 57).attr({"fill":"270-#e7e8ea-#b7bbc2", r : "10px", "stroke-width" :  "2", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"17px"}));
+    return set;
+}});
+    g.addNode("46583", { label:"DNA\npolymerase iii", numLines:2, url:"DNA-Polymerase-III_RelationGraph.html", render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-26, 100, 53).attr({"fill":"270-#e7e8ea-#b7bbc2", r : "4px", "stroke-width" :  "2", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addNode("46586", { label:"DNA\npolymerase ii", numLines:2, url:"DNA-Polymerase-II_RelationGraph.html", render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-26, 100, 53).attr({"fill":"270-#e7e8ea-#b7bbc2", r : "4px", "stroke-width" :  "2", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addNode("46589", { label:"DNA\npolymerase i", numLines:2, url:"DNA-Polymerase-I_RelationGraph.html", render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-26, 100, 53).attr({"fill":"270-#e7e8ea-#b7bbc2", r : "4px", "stroke-width" :  "2", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addNode("46592", { label:"golgi\napparatus", numLines:2, url:"Golgi-Apparatus_RelationGraph.html", render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-26, 100, 53).attr({"fill":"270-#e7e8ea-#b7bbc2", r : "4px", "stroke-width" :  "2", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addNode("46595", { label:"smooth\nendoplasmic\nreticulum", numLines:3, url:"Smooth-Endoplasmic-Reticulum_RelationGraph.html", render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-33, 100, 66).attr({"fill":"270-#e7e8ea-#b7bbc2", r : "4px", "stroke-width" :  "2", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addNode("46598", { label:"rough\nendoplasmic\nreticulum", numLines:3, url:"Rough-Endoplasmic-Reticulum_RelationGraph.html", render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-33, 100, 66).attr({"fill":"270-#e7e8ea-#b7bbc2", r : "4px", "stroke-width" :  "2", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addNode("46601", { label:"mitochondrion", numLines:1, url:"Mitochondrion_RelationGraph.html", render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-20, 100, 40).attr({"fill":"270-#e7e8ea-#b7bbc2", r : "4px", "stroke-width" :  "2", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addNode("46604", { label:"inner membrane", numLines:1, url:"Inner-Membrane_RelationGraph.html", render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-20, 100, 40).attr({"fill":"270-#e7e8ea-#b7bbc2", r : "4px", "stroke-width" :  "2", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addNode("46607", { label:"mitochondrial\ndna", numLines:2, url:"Mitochondrial-DNA_RelationGraph.html", render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-26, 100, 53).attr({"fill":"270-#e7e8ea-#b7bbc2", r : "4px", "stroke-width" :  "2", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addNode("46602", { isRelationNode:true, label: "has parts", url:"", render:relationRender});
+    g.addEdge("46601", "46602", {stroke : "#3D424F"});
+    g.addEdge("46602", "46604", {directed: true, stroke : "#3D424F"});
+    g.addEdge("46602", "46607", {directed: true, stroke : "#3D424F"});
+    g.addNode("46610", { label:"mitochondrion", numLines:1, url:"Mitochondrion_RelationGraph.html", render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-20, 100, 40).attr({"fill":"270-#e7e8ea-#b7bbc2", r : "4px", "stroke-width" :  "2", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addNode("46613", { label:"mitochondrial\ndna", numLines:2, url:"Mitochondrial-DNA_RelationGraph.html", render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-26, 100, 53).attr({"fill":"270-#e7e8ea-#b7bbc2", r : "4px", "stroke-width" :  "2", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addNode("46611", { isRelationNode:true, label: "has parts", url:"", render:relationRender});
+    g.addEdge("46610", "46611", {stroke : "#3D424F"});
+    g.addEdge("46611", "46613", {directed: true, stroke : "#3D424F"});
+    g.addNode("46616", { label:"cytoskeleton", numLines:1, url:"Cytoskeleton_RelationGraph.html", render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-20, 100, 40).attr({"fill":"270-#e7e8ea-#b7bbc2", r : "4px", "stroke-width" :  "2", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addNode("46619", { label:"eukaryotic\nchromosome", numLines:2, url:"Eukaryotic-Chromosome_RelationGraph.html", render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-26, 100, 53).attr({"fill":"270-#e7e8ea-#b7bbc2", r : "4px", "stroke-width" :  "2", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addNode("46622", { label:"telomere", numLines:1, url:"Telomere_RelationGraph.html", render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-20, 100, 40).attr({"fill":"270-#e7e8ea-#b7bbc2", r : "4px", "stroke-width" :  "2", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addNode("46625", { label:"protein", numLines:1, url:"Protein_RelationGraph.html", render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-20, 100, 40).attr({"fill":"270-#e7e8ea-#b7bbc2", r : "4px", "stroke-width" :  "2", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addNode("46628", { label:"chromosome arm", numLines:1, url:"Chromosome-Arm_RelationGraph.html", render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-20, 100, 40).attr({"fill":"270-#e7e8ea-#b7bbc2", r : "4px", "stroke-width" :  "2", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addNode("46631", { label:"chromosome arm", numLines:1, url:"Chromosome-Arm_RelationGraph.html", render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-20, 100, 40).attr({"fill":"270-#e7e8ea-#b7bbc2", r : "4px", "stroke-width" :  "2", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addNode("46634", { label:"DNA", numLines:1, url:"DNA_RelationGraph.html", render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-20, 100, 40).attr({"fill":"270-#e7e8ea-#b7bbc2", r : "4px", "stroke-width" :  "2", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addNode("46620", { isRelationNode:true, label: "has parts", url:"", render:relationRender});
+    g.addEdge("46619", "46620", {stroke : "#3D424F"});
+    g.addEdge("46620", "46622", {directed: true, stroke : "#3D424F"});
+    g.addEdge("46620", "46625", {directed: true, stroke : "#3D424F"});
+    g.addEdge("46620", "46628", {directed: true, stroke : "#3D424F"});
+    g.addEdge("46620", "46631", {directed: true, stroke : "#3D424F"});
+    g.addEdge("46620", "46634", {directed: true, stroke : "#3D424F"});
+    g.addNode("46637", { label:"genome", numLines:1, url:"Genome_RelationGraph.html", render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-20, 100, 40).attr({"fill":"270-#e7e8ea-#b7bbc2", r : "4px", "stroke-width" :  "2", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addNode("46640", { label:"motor protein", numLines:1, url:"Motor-Protein_RelationGraph.html", render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-20, 100, 40).attr({"fill":"270-#e7e8ea-#b7bbc2", r : "4px", "stroke-width" :  "2", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addNode("46643", { label:"eukaryotic\nribosome", numLines:2, url:"Eukaryotic-Ribosome_RelationGraph.html", render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-26, 100, 53).attr({"fill":"270-#e7e8ea-#b7bbc2", r : "4px", "stroke-width" :  "2", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addNode("46646", { label:"animal plasma\nmembrane", numLines:2, url:"Animal-Plasma-Membrane_RelationGraph.html", render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-26, 100, 53).attr({"fill":"270-#e7e8ea-#b7bbc2", r : "4px", "stroke-width" :  "2", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addNode("46649", { label:"glycoprotein", numLines:1, url:"Glycoprotein_RelationGraph.html", render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-20, 100, 40).attr({"fill":"270-#e7e8ea-#b7bbc2", r : "4px", "stroke-width" :  "2", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addNode("46652", { label:"integrin", numLines:1, url:"Integrin_RelationGraph.html", render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-20, 100, 40).attr({"fill":"270-#e7e8ea-#b7bbc2", r : "4px", "stroke-width" :  "2", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addNode("46655", { label:"phospholipid\nbilayer", numLines:2, url:"Phospholipid-Bilayer_RelationGraph.html", render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-26, 100, 53).attr({"fill":"270-#e7e8ea-#b7bbc2", r : "4px", "stroke-width" :  "2", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addNode("46658", { label:"membrane\nprotein", numLines:2, url:"Membrane-Protein_RelationGraph.html", render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-26, 100, 53).attr({"fill":"270-#e7e8ea-#b7bbc2", r : "4px", "stroke-width" :  "2", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addNode("46661", { label:"sodium\npotassium pump", numLines:2, url:"Sodium-Potassium-Pump_RelationGraph.html", render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-26, 100, 53).attr({"fill":"270-#e7e8ea-#b7bbc2", r : "4px", "stroke-width" :  "2", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addNode("46647", { isRelationNode:true, label: "has parts", url:"", render:relationRender});
+    g.addEdge("46646", "46647", {stroke : "#3D424F"});
+    g.addEdge("46647", "46649", {directed: true, stroke : "#3D424F"});
+    g.addEdge("46647", "46652", {directed: true, stroke : "#3D424F"});
+    g.addEdge("46647", "46655", {directed: true, stroke : "#3D424F"});
+    g.addEdge("46647", "46658", {directed: true, stroke : "#3D424F"});
+    g.addEdge("46647", "46661", {directed: true, stroke : "#3D424F"});
+    g.addNode("46664", { label:"cytoplasm", numLines:1, url:"Cytoplasm_RelationGraph.html", render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-20, 100, 40).attr({"fill":"270-#e7e8ea-#b7bbc2", r : "4px", "stroke-width" :  "2", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addNode("46667", { label:"protein enzyme", numLines:1, url:"Protein-Enzyme_RelationGraph.html", render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-20, 100, 40).attr({"fill":"270-#e7e8ea-#b7bbc2", r : "4px", "stroke-width" :  "2", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addNode("46670", { label:"protein enzyme", numLines:1, url:"Protein-Enzyme_RelationGraph.html", render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-20, 100, 40).attr({"fill":"270-#e7e8ea-#b7bbc2", r : "4px", "stroke-width" :  "2", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addNode("46673", { label:"solid\nsubstance", numLines:2, url:false, render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-26, 100, 53).attr({"fill":"#e6e7eb", r : "4px", "stroke-width" :  "1", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addNode("46676", { label:"cytosol", numLines:1, url:"Cytosol_RelationGraph.html", render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-20, 100, 40).attr({"fill":"270-#e7e8ea-#b7bbc2", r : "4px", "stroke-width" :  "2", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addNode("46665", { isRelationNode:true, label: "has parts", url:"", render:relationRender});
+    g.addEdge("46664", "46665", {stroke : "#3D424F"});
+    g.addEdge("46665", "46667", {directed: true, stroke : "#3D424F"});
+    g.addEdge("46665", "46670", {directed: true, stroke : "#3D424F"});
+    g.addEdge("46665", "46673", {directed: true, stroke : "#3D424F"});
+    g.addEdge("46665", "46676", {directed: true, stroke : "#3D424F"});
+    g.addNode("46679", { label:"centrosome", numLines:1, url:"Centrosome_RelationGraph.html", render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-20, 100, 40).attr({"fill":"270-#e7e8ea-#b7bbc2", r : "4px", "stroke-width" :  "2", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addNode("46682", { label:"centriole", numLines:1, url:"Centriole_RelationGraph.html", render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-20, 100, 40).attr({"fill":"270-#e7e8ea-#b7bbc2", r : "4px", "stroke-width" :  "2", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addNode("46685", { label:"protein", numLines:1, url:"Protein_RelationGraph.html", render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-20, 100, 40).attr({"fill":"270-#e7e8ea-#b7bbc2", r : "4px", "stroke-width" :  "2", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addNode("46680", { isRelationNode:true, label: "has parts", url:"", render:relationRender});
+    g.addEdge("46679", "46680", {stroke : "#3D424F"});
+    g.addEdge("46680", "46682", {directed: true, stroke : "#3D424F"});
+    g.addEdge("46680", "46685", {directed: true, stroke : "#3D424F"});
+    g.addNode("46688", { label:"nucleus", numLines:1, url:"Nucleus_RelationGraph.html", render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-20, 100, 40).attr({"fill":"270-#e7e8ea-#b7bbc2", r : "4px", "stroke-width" :  "2", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addNode("46691", { label:"nuclear\nmembrane", numLines:2, url:"Nuclear-Membrane_RelationGraph.html", render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-26, 100, 53).attr({"fill":"270-#e7e8ea-#b7bbc2", r : "4px", "stroke-width" :  "2", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addNode("46689", { isRelationNode:true, label: "has parts", url:"", render:relationRender});
+    g.addEdge("46688", "46689", {stroke : "#3D424F"});
+    g.addEdge("46689", "46691", {directed: true, stroke : "#3D424F"});
+    g.addNode("46581", { isRelationNode:true, label: "has parts", url:"", render:relationRender});
+    g.addEdge("46580", "46581", {stroke : "#3D424F"});
+    g.addEdge("46581", "46583", {directed: true, stroke : "#3D424F"});
+    g.addEdge("46581", "46586", {directed: true, stroke : "#3D424F"});
+    g.addEdge("46581", "46589", {directed: true, stroke : "#3D424F"});
+    g.addEdge("46581", "46592", {directed: true, stroke : "#3D424F"});
+    g.addEdge("46581", "46595", {directed: true, stroke : "#3D424F"});
+    g.addEdge("46581", "46598", {directed: true, stroke : "#3D424F"});
+    g.addEdge("46581", "46601", {directed: true, stroke : "#3D424F"});
+    g.addEdge("46581", "46610", {directed: true, stroke : "#3D424F"});
+    g.addEdge("46581", "46616", {directed: true, stroke : "#3D424F"});
+    g.addEdge("46581", "46619", {directed: true, stroke : "#3D424F"});
+    g.addEdge("46581", "46637", {directed: true, stroke : "#3D424F"});
+    g.addEdge("46581", "46640", {directed: true, stroke : "#3D424F"});
+    g.addEdge("46581", "46643", {directed: true, stroke : "#3D424F"});
+    g.addEdge("46581", "46646", {directed: true, stroke : "#3D424F"});
+    g.addEdge("46581", "46664", {directed: true, stroke : "#3D424F"});
+    g.addEdge("46581", "46679", {directed: true, stroke : "#3D424F"});
+    g.addEdge("46581", "46688", {directed: true, stroke : "#3D424F"});
+    g.addNode("46582", { isRelationNode:true, isScNode:true, label: "is a", url:"", render:relationRender});
+    g.addEdge("46580", "46582", {isScEdge:true, directed: true, stroke : "#3D424F"});
+    g.addNode("46694", { isScNode:true, label:"animal cell", numLines:1, url:"Animal-Cell_RelationGraph.html", render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-20, 100, 40).attr({"fill":"270-#e7e8ea-#b7bbc2", r : "4px", "stroke-width" :  "2", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addEdge("46582", "46694", { isScEdge:true, directed: true, stroke : "#3D424F"});
+    g.addNode("46695", { isScNode:true, label:"gamete", numLines:1, url:"Gamete_RelationGraph.html", render:function(r, n) {
+    /* the Raphael set is obligatory, containing all you want to display */
+    var set = r.set().push(
+    /* custom objects go here */
+    r.rect(n.point[0]-50, n.point[1]-20, 100, 40).attr({"fill":"270-#e7e8ea-#b7bbc2", r : "4px", "stroke-width" :  "2", "stroke":"#babfc6" })).push(
+    r.text(n.point[0], n.point[1] + 0, (n.label || n.id)).attr({"fill": "#3D424F", "fill-opacity":1, "font-size":"12px"}));
+    return set;
+}});
+    g.addEdge("46582", "46695", { isScEdge:true, directed: true, stroke : "#3D424F"});
+    /* layout the graph using the Spring layout implementation */
+    var layouter = new Graph.Layout.Spring(g);
+   layouter.layout();
+    /* draw the graph using the RaphaelJS draw implementation */
+    var renderer = new Graph.Renderer.Raphael('canvas', g);  
+    renderer.draw();
+};
+-->
+    </script>
+</head>
+<body class="cmap">
+  <div class="glossary-page cmap">
+     <div id="cmap-toggle">
+       <div id="hide-cmap"><a href="Human-Gamete.html">definition</a></div>
+       <div id="show-cmap" class="pushed"><a href="Human-Gamete_RelationGraph.html">concept map</a></div>
+     </div>
+     <h2>Human-Gamete</h2>
+     <center>
+       <div id="canvas"></div>
+     </center>
+  </div>
+</body>
+</html>

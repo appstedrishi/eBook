@@ -1,0 +1,151 @@
+@charset "UTF-8";
+
+.highlighted {
+  display: inline;
+  padding-top: 2px;
+  padding-bottom: 1px;
+  border-bottom: inherit;
+  background: url(../images/highlight-yellow-lite.png) repeat-x left center;
+}
+
+.highlighted.focused {
+  background: url(../images/highlight-yellow.png) repeat-x;
+}
+
+.highlighted.block {
+  display: block;
+}
+
+.highlighted img {
+  opacity: 0.5;
+}
+
+.touchable {
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+
+/* hide ugly tap-highlight for everything but <a> */
+body {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none; /*archit */
+}
+body .concept{ padding-bottom: 4000px; }
+p, h2, h3, li, .fig-caption, .graph-intro {
+    -webkit-user-select: auto; /* none archit */
+}
+
+a {
+  -webkit-tap-highlight-color: rgba(0,0,0,0.3);
+}
+
+.keywords, .fig a, .fig-wide a {
+  -webkit-tap-highlight-color: transparent;
+}
+.keywords.touchactive {
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 2px;
+}
+.keywords, .text-ref, .image-ref, .toc-section-link, .toc-sub-section-link, .suggested-question {
+    -webkit-touch-callout: none;
+}
+
+#copyright {  
+	color: #7f828e;  
+	line-height: 13pt;  
+	font-size: 10pt;  
+	position: relative; 
+	font-family: HelveticaNeue, "Helvetica Neue", Arial;
+}
+
+/* Style the keyword popup */
+.bt-wrapper {
+  -webkit-user-select: none; /*archit */
+}
+
+.bt-content p, .bt-content a {
+	line-height: 15pt;
+	font-size: 13pt;
+	font-family: HelveticaNeue;
+    font-style: normal;
+    text-align: left;
+	-webkit-hyphens: none;
+    -webkit-user-select:none; /*archit */
+    color: #222;
+    margin-bottom: 0;
+}
+.bt-content p.human-authored:not(:empty) {
+	margin-top: 9px;
+}
+.bt-content p.human-authored:empty {
+	margin-top: 0px;
+}
+.bt-content #shortdef {
+	margin: 0px 0 0 3px;
+}
+.bt-content .navigation {
+	display: block;
+	float: right;
+	text-transform: uppercase;
+	font-size: 11px;
+	line-height: 14pt;
+	border-bottom: none;
+	color: #777;
+	background: #eee;
+	padding: 0px 5px 0;
+	margin-top: 1px;
+	margin-right: -4px;
+	border-radius: 2px;
+	border: solid 1px #dedede;
+	background: -webkit-linear-gradient(#efefef 0%, #dedede 100%);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none; /*archit */
+    -webkit-tap-highlight-color: rgba(0,0,0,0.3);
+}
+
+.bt-content h3 {
+	border-style: none;
+	padding: 0;
+	margin: -3px 0 0 0 !important;
+	line-height: 15pt;
+	font-size: 13pt;
+	font-family: HelveticaNeue, "Helvetica Neue", Arial;
+    color: #444;
+	font-style: normal;
+	font-weight: bold;
+    -webkit-touch-callout: none;
+}
+.bt-content h3 a, .bt-content a {
+	text-transform: none;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: rgba(255,255,255,0.1);
+    border-bottom: none;
+	color: #efefef;
+}
+.bt-content h3 a:after {
+    content: " \279E";
+	font-weight: bold;
+	font-size: 13px;
+}
+
+.bt-content .popup-close {
+	border-style: none;
+	padding: 0;
+	margin-left: 0px;
+	margin-bottom: 0px;
+	margin-right: -2px;
+	margin-top: -1px;
+	float: right;
+	height: 22px;
+	width: 22px;
+	color: #eee;
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 18px;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: rgba(255,255,255,0.1);
+}
+
+.fig-page .bt-wrapper { margin-top: 55px !important; font-size: 50px;}

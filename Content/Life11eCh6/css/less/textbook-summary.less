@@ -1,0 +1,50 @@
+@import "includes";
+
+.hellip {
+	font-style: italic;
+	color: #7f828e;
+}
+
+/*
+p.hellip {
+  text-indent: 0;
+}
+*/
+
+
+.sub-section > p, .sub-concept > p {
+/* 	text-indent: 0 !important; */
+/* 	margin-bottom: 20px; */
+	color: rgba(0,0,0,0);
+  	line-height: 12pt;
+  	-webkit-transition-property: color, line-height; 
+	-webkit-transition-duration: 0.5s, 0.14s; 
+	-webkit-transition-timing-function: ease-out, ease-in;
+	.keywords, a {
+		color: transparent;
+		border-bottom: none;
+	  	-webkit-transition-property: color; 
+		-webkit-transition-duration: 0.5s; 
+		-webkit-transition-timing-function: ease-out;
+	}
+}
+
+
+.highlighted {
+  background-image: none;
+  display: inline;
+  padding-top: inherit;
+  padding-bottom: inherit;
+  border-bottom: inherit;
+  color: black;
+  line-height: 23pt;
+  a {
+  	color: @link-blue !important;
+  }
+  .keywords {
+  	color: black !important;
+	border-bottom-color: #bcbdc5 !important;
+	border-bottom-width: 1px !important;
+	border-bottom-style: solid !important;
+  }
+}

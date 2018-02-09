@@ -1,0 +1,25 @@
+<p id="para07">start text<span class="emphasis">inner text</span>middle text<span class="emphasis2">inner text 2</span>end text<img src="something.png" alt="something"/>more text</p>
+<div>block text</div>
+
+<p id="para07-with-spans">
+  <span class="touchable">start </span><span class="touchable">text</span>
+  <span class="emphasis">
+    <span class="touchable">inner </span><span class="touchable">text</span>
+  </span>
+  <span class="touchable">middle </span><span class="touchable">text</span>
+  <span class="emphasis2">
+    <span class="touchable">inner </span><span class="touchable">text </span><span class="touchable">2</span>
+  </span>
+  <span class="touchable">end </span><span class="touchable">text</span>
+  <img src="something.png" alt="something"/>
+  <span class="touchable">more </span><span class="touchable">text</span>
+</p>
+
+<div id="several-highlights">
+  <p>first text</p>
+  <p>some text with
+    <span class="highlighted" id="highlight-3">nested</span>te
+    <span id="sibling-after-highlight">x</span>t
+  </p>
+  <p>last <span id="non-sibling-after-highlight">te</span>xt</p>
+</div>

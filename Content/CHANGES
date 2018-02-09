@@ -1,0 +1,17 @@
+- Ensure the doctype is correct (<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">)
+- Remove reference to JS and spurious CSS files.  Change paths to PC.css file, and add references to new CSS and JS files:
+  <link rel="Stylesheet"        href="../../css/halo.css" type="text/css" media="screen"/>
+  <link rel="Stylesheet"        href="../../javascript/bt-0.9.5-rc1/jquery.bt.css" type="text/css" media="screen"/>
+  <script type="text/javascript" src="../../javascript/jquery-1.4.2.min.js"></script>
+  <script type="text/javascript" src="../../javascript/bt-0.9.5-rc1/jquery.bt.js"></script>
+  <script type="text/javascript" src="../../javascript/logger.js"></script>
+  <script type="text/javascript" src="../../javascript/halo.js"></script>
+  <script type="text/javascript" src="../../javascript/keyword.js"></script>
+
+  and remove reference to nonexistent script:
+  <script src="../js/scripts.js" language="JavaScript" type="text/javascript"></script>
+
+- Add highlight-target markup elements.
+- Keyword links should have "keywords" class.
+- Glossary definition should have a div with an id="shortdef".
+- Ensure that case of href links matches filename case (device is case-sensitive, while browsers are not).

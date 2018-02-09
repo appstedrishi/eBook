@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<book xmlns="http://www.w3.org/1999/xhtml">
+  <unit>
+    <number/>
+      <title>Introduction</title>
+      <chapter>
+         <title>Welcome to Inquire</title>
+         <concept>
+            <title>Welcome to Inquire</title>
+            <path>index.html</path>
+         </concept>
+          <concept>
+              <title>Activity Log</title>
+              <path>html/log.html</path>
+          </concept>
+      </chapter>
+  </unit>
+ 
+  </unit>
+  <unit>
+    <number>2</number>
+      <title>Cells</title>
+       <chapter>
+         <number>6</number>
+         <title>Cell Membranes</title>
+         <concept>
+            <title>Overview</title>
+            <path>book/chapter6/chapter6.html</path>
+         </concept>
+         <concept>
+            <number>1</number>
+            <title>Biological Membranes are Lipid-Protein Bilayers</title>
+            <path>book/chapter6/chapter6-1.html</path>
+         </concept>
+         <concept>
+            <number>2</number>
+            <title>Membrane structure results in selective permeability</title>
+            <path>book/chapter6/chapter6-2.html</path>
+         </concept>
+         <concept>
+            <number>3</number>
+            <title>Passive transport is diffusion of a substance across a membrane with no energy investment</title>
+            <path>book/chapter6/chapter6-3.html</path>
+         </concept>
+         <concept>
+            <number>4</number>
+            <title>Active transport uses energy to move solutes against their gradients</title>
+            <path>book/chapter6/chapter6-4.html</path>
+         </concept>
+         <concept>
+            <number>5</number>
+            <title>Bulk transport across the plasma membrane occurs by exocytosis and endocytosis</title>
+            <path>book/chapter6/chapter6-5.html</path>
+         </concept>
+	 <review>
+	   <title>Chapter Summary</title>
+	   <path>book/chapter6/chapter6-summary.html</path>
+	 </review>
+       </chapter>
+  </unit>
+</book>

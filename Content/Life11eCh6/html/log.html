@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <link rel="Stylesheet" href="../css/halo-common.css" type="text/css" media="screen" />
+        <script type="text/javascript" src="../javascript/halo-common.js"></script>
+        <script type="text/javascript">                                         
+            $(document).ready(function() {
+                $.get('../../../Documents/console.log', function(data) {
+                    var lines = data.split("\n");
+                    $.each(lines, function(n, elem) {
+                        $('#content').append('<p>' + elem + '</p>');
+                    });
+                });
+                $('#scrollDown').click(function() {
+                   $(window).scrollTop($(document).height()-$(window).height());
+                   return false;
+                });
+                $('#scrollUp').click(function() {
+                   $(window).scrollTop(0);
+                   return false;
+                });
+            });
+        </script>
+        <title>Activity Log</title>
+    </head>
+    <body style='margin:60px 20px; font:12px Courier; font-weight:bold;'>
+        <p><a href='#' id='scrollDown'>scroll to bottom</a>
+        <div id="content"></div>
+        <p><a href='#' id='scrollUp'>scroll to top</a>
+    </body>
+</html>

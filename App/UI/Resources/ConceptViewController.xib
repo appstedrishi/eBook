@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" colorMatched="YES">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ConceptViewController">
+            <connections>
+                <outlet property="backButton" destination="119" id="134"/>
+                <outlet property="contentViewContainer" destination="199" id="200"/>
+                <outlet property="fontButton" destination="137" id="180"/>
+                <outlet property="highlightToolbar" destination="176" id="179"/>
+                <outlet property="hiliteButton" destination="124" id="181"/>
+                <outlet property="historyButton" destination="182" id="186"/>
+                <outlet property="navigationToolbar" destination="135" id="149"/>
+                <outlet property="qaButton" destination="129" id="148"/>
+                <outlet property="rightNavigationViewForHighlighting" destination="88" id="94"/>
+                <outlet property="scrollBar" destination="197" id="198"/>
+                <outlet property="textToolbar" destination="136" id="150"/>
+                <outlet property="tocButton" destination="121" id="185"/>
+                <outlet property="toolbar" destination="133" id="151"/>
+                <outlet property="toolbarNavArrow" destination="194" id="196"/>
+                <outlet property="view" destination="1" id="5"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="199" userLabel="content view">
+                    <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <subviews>
+                        <view opaque="NO" contentMode="scaleToFill" id="133" userLabel="toolbar">
+                            <rect key="frame" x="0.0" y="0.0" width="44" height="768"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
+                            <subviews>
+                                <view hidden="YES" contentMode="scaleToFill" id="176" userLabel="highlight-toolbar">
+                                    <rect key="frame" x="0.0" y="0.0" width="44" height="768"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="172" userLabel="hilite cancel button">
+                                            <rect key="frame" x="0.0" y="723" width="44" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <state key="normal" image="toolbar-x-small.png"/>
+                                            <connections>
+                                                <action selector="didTapHighlightDoneButton" destination="-1" eventType="touchUpInside" id="174"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </view>
+                                <view contentMode="scaleToFill" id="136" userLabel="action-toolbar">
+                                    <rect key="frame" x="0.0" y="0.0" width="44" height="768"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="119" userLabel="back button">
+                                            <rect key="frame" x="0.0" y="2" width="44" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="toolbar-back-small.png"/>
+                                            <connections>
+                                                <action selector="goBack" destination="-1" eventType="touchUpInside" id="120"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="137" userLabel="font button">
+                                            <rect key="frame" x="0.0" y="719" width="44" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <state key="normal" image="toolbar-font-small.png"/>
+                                            <connections>
+                                                <action selector="didTapFontButton:" destination="-1" eventType="touchUpInside" id="142"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="124" userLabel="hilite button">
+                                            <rect key="frame" x="0.0" y="670" width="44" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <state key="normal" image="toolbar-hilite-small.png"/>
+                                            <connections>
+                                                <action selector="didTapHighlightButton" destination="-1" eventType="touchUpInside" id="126"/>
+                                            </connections>
+                                        </button>
+                                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="129" userLabel="QA button">
+                                            <rect key="frame" x="0.0" y="51" width="44" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <inset key="imageEdgeInsets" minX="-1" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            <state key="normal" image="toolbar-qa-small.png"/>
+                                            <connections>
+                                                <action selector="didTapQuestionAnswerButton" destination="-1" eventType="touchUpInside" id="193"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </view>
+                                <view contentMode="scaleToFill" id="135" userLabel="nav-toolbar">
+                                    <rect key="frame" x="0.0" y="327" width="44" height="93"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="toolbar-arrow.png" id="194">
+                                            <rect key="frame" x="38" y="65" width="6" height="12"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="182" userLabel="history button">
+                                            <rect key="frame" x="0.0" y="49" width="44" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="toolbar-history-small.png"/>
+                                            <connections>
+                                                <action selector="didTapHistoryButton" destination="-1" eventType="touchUpInside" id="184"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="121" userLabel="TOC button">
+                                            <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="toolbar-toc-small.png"/>
+                                            <connections>
+                                                <action selector="didTapTOCButton:" destination="-1" eventType="touchUpInside" id="127"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <view contentMode="scaleToFill" id="197" customClass="WKVerticalScrollBarCustom">
+                    <rect key="frame" x="1018" y="0.0" width="6" height="768"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" heightSizable="YES"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="55" y="-318"/>
+        </view>
+        <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="88" userLabel="Right Toolbar for Highlighting">
+            <rect key="frame" x="0.0" y="0.0" width="212" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+            <items>
+                <barButtonItem image="hl-button-checked.png" style="plain" id="107">
+                    <color key="tintColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </barButtonItem>
+                <barButtonItem style="plain" systemItem="flexibleSpace" id="112"/>
+                <barButtonItem image="hl-button-round.png" style="plain" id="108">
+                    <color key="tintColor" red="0.3999053836" green="0.9074918032" blue="0.027383567769999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </barButtonItem>
+                <barButtonItem style="plain" systemItem="flexibleSpace" id="111"/>
+                <barButtonItem image="hl-button-round.png" style="plain" id="109">
+                    <color key="tintColor" red="0.50418388843536377" green="0.65826630592346191" blue="0.90123528242111206" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </barButtonItem>
+                <barButtonItem width="12" style="plain" systemItem="fixedSpace" id="110"/>
+                <barButtonItem title="Cancel" id="89" userLabel="HL cancel button">
+                    <color key="tintColor" red="0.14583927392959595" green="0.19989407062530518" blue="0.27781116962432861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <action selector="didTapHighlightDoneButton" destination="-1" id="96"/>
+                    </connections>
+                </barButtonItem>
+            </items>
+            <color key="tintColor" red="0.15518374741077423" green="0.21317820250988007" blue="0.29593205451965332" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </toolbar>
+    </objects>
+    <resources>
+        <image name="hl-button-checked.png" width="32" height="32"/>
+        <image name="hl-button-round.png" width="32" height="32"/>
+        <image name="toolbar-arrow.png" width="6" height="12"/>
+        <image name="toolbar-back-small.png" width="44" height="44"/>
+        <image name="toolbar-font-small.png" width="44" height="44"/>
+        <image name="toolbar-hilite-small.png" width="44" height="44"/>
+        <image name="toolbar-history-small.png" width="44" height="44"/>
+        <image name="toolbar-qa-small.png" width="44" height="44"/>
+        <image name="toolbar-toc-small.png" width="44" height="44"/>
+        <image name="toolbar-x-small.png" width="24" height="24"/>
+    </resources>
+</document>

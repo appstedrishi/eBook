@@ -1,0 +1,28 @@
+Installing on a clean Windows machine:
+
+1) Install ruby
+- Download ruby installer from http://rubyforge.org/frs/download.php/72085/rubyinstaller-1.8.7-p302.exe
+- Run the installer; be sure the check the "Add Ruby executables to your PATH" checkbox.
+
+2) Install mongrel and sinatra
+c:\> gem install mongrel --version 1.1.5 --no-ri --no-rdoc 
+c:\> gem install sinatra --version 1.0 --no-ri --no-rdoc 
+
+2.1) Install other gems
+c:\> gem install builder --version 2.1.2 --no-ri --no-rdoc 
+c:\> gem install soap4r --version 1.5.8 --no-ri --no-rdoc 
+c:\> gem install nokogiri --version 1.4.3.1 --no-ri --no-rdoc 
+
+2.2) If running on a virtual machine, configure networking appropriately (Bridged networking or static IP)
+
+3) Install the proxy server
+- Navigate to http://github.com/sri-omg/halo_aura_proxy
+- Click on the "Download ZIP" button, which in their current UI is a button that says "ZIP" with an image of an arrow coming out of a cloud.
+
+3.1) Unzip the archive and move the project folder to the "halo" folder with the Aura client, server, etc.  Note: the project folder will probably be INSIDE the archive folder, named sri-omg-halo_aura_proxy-<some crazy hash>. Rename the folder to "proxy".
+
+4a) To start the proxy server manually, first launch Aura. Then use the command line to navigate to the project folder and start the server using "ruby server.rb -p80"
+
+4b) To start the proxy server along with Aura, use the "aura-server-startup-with-kb-and-proxy.cmd" script. Be sure to watch the startup: You will probably need to OK several security or firewall warnings. A Ruby command line window should open at some point and remain open; it will print messages if you are successfully talking to the proxy server.
+
+5) Set the Halo app settings on the iPad to point at the IP of the server machine: set "Use custom host?" to ON and type the IP into the "Custom host" field.

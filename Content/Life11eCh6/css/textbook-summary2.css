@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+}
+.hellip {
+  font-style: italic;
+  color: #7f828e;
+}
+/*
+p.hellip {
+  text-indent: 0;
+}
+*/
+.sub-section > p, .sub-concept > p {
+  	text-indent: 0 !important;
+  	margin-bottom: 20px;
+}
+.fig-wide {
+	margin-bottom: 20px;
+}
+
+.highlighted {
+  background-image: none;
+  display: inline;
+  padding-top: inherit;
+  padding-bottom: inherit;
+  border-bottom: inherit;
+}
+/*
+.highlighted a {
+  color: #0b4ec0 !important;
+}
+.highlighted .keywords {
+  color: black !important;
+  border-bottom-color: #bcbdc5 !important;
+  border-bottom-width: 1px !important;
+  border-bottom-style: solid !important;
+}
+*/

@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<book xmlns="http://www.w3.org/1999/xhtml">
+    <unit>
+        <number/>
+        <title>Introduction</title>
+        <chapter>
+            <title>Welcome to Inquire</title>
+            <concept>
+                <title>Welcome to Inquire</title>
+                <path>index.html</path>
+            </concept>
+            <concept>
+                <title>Activity Log</title>
+                <path>html/log.html</path>
+            </concept>
+        </chapter>
+    </unit>
+    <unit>
+        <number>1</number>
+        <title>The Science of Life and Its Chemical Basis</title>
+        <chapter>
+            <number>1</number>
+            <title>Studying Life</title>
+            <concept>
+                <title>Overview</title>
+                <path>book/chapter1/chapter1.html</path>
+            </concept>
+            <concept>
+                <number>1</number>
+                <title>Living Organisms Share Similarities and a Common Origin</title>
+                <path>book/chapter1/chapter1-1.html</path>
+            </concept>
+            <concept>
+                <number>2</number>
+                <title>Biologists Investigate Life through Experiments That Test Hypotheses</title>
+                <path>book/chapter1/chapter1-2.html</path>
+            </concept>
+            <concept>
+                <number>3</number>
+                <title>Understanding Biology Is Important for Health, Well-Being, and Public-Policy Decisions</title>
+                <path>book/chapter1/chapter1-3.html</path>
+            </concept>
+            <review>
+                <title>Chapter Summary</title>
+                <path>book/chapter1/chapter1-summary.html</path>
+            </review>
+        </chapter>
+        
+        <chapter>
+            <number>2</number>
+            <title>Small Molecules and the Chemistry of Life</title>
+            <concept>
+                <title>Overview</title>
+                <path>book/chapter2/chapter2.html</path>
+            </concept>
+            <concept>
+                <number>1</number>
+                <title>Atomic Structure Explains the Properties of Matter</title>
+                <path>book/chapter2/chapter2-1.html</path>
+            </concept>
+            <concept>
+                <number>2</number>
+                <title>Atoms Bond to Form Molecules</title>
+                <path>book/chapter2/chapter2-2.html</path>
+            </concept>
+            <concept>
+                <number>3</number>
+                <title>Atoms Change Partners in Chemical Reactions</title>
+                <path>book/chapter2/chapter2-3.html</path>
+            </concept>
+            <concept>
+                <number>4</number>
+                <title>Water Is Critical for Life</title>
+                <path>book/chapter2/chapter2-4.html</path>
+            </concept>
+            <review>
+                <title>Chapter Summary</title>
+                <path>book/chapter2/chapter2-summary.html</path>
+            </review>
+        </chapter>
+        <chapter>
+            <number>3</number>
+            <title>Proteins, Carbohydrates, and Lipids</title>
+            <concept>
+                <title>Overview</title>
+                <path>book/chapter3/chapter3.html</path>
+            </concept>
+            <concept>
+                <number>1</number>
+                <title>Macromolecules Characterize Living Things</title>
+                <path>book/chapter3/chapter3-1.html</path>
+            </concept>
+            <concept>
+                <number>2</number>
+                <title>The Function of a Protein Depends on Its Three-Dimensional Structure</title>
+                <path>book/chapter3/chapter3-2.html</path>
+            </concept>
+            <concept>
+                <number>3</number>
+                <title>Simple Sugars Are the Basic Structural Unit of Carbohydrates</title>
+                <path>book/chapter3/chapter3-3.html</path>
+            </concept>
+            <concept>
+                <number>4</number>
+                <title>Lipids Are Defined by Their Solubility Rather Than by Chemical Structure</title>
+                <path>book/chapter3/chapter3-4.html</path>
+            </concept>
+            <review>
+                <title>Chapter Summary</title>
+                <path>book/chapter3/chapter3-summary.html</path>
+            </review>
+        </chapter>
+        <chapter>
+            <number>4</number>
+            <title>Nucleic Acids and the Origin of Life</title>
+            <concept>
+                <title>Overview</title>
+                <path>book/chapter4/chapter4.html</path>
+            </concept>
+            <concept>
+                <number>1</number>
+                <title>Nucleic Acid Structures Reflect Their Functions</title>
+                <path>book/chapter4/chapter4-1.html</path>
+            </concept>
+            <concept>
+                <number>2</number>
+                <title>The Small Molecules of Life Originated on Primitive Earth</title>
+                <path>book/chapter4/chapter4-2.html</path>
+            </concept>
+            <concept>
+                <number>3</number>
+                <title>The Large Molecules of Life Originated from Small Molecules</title>
+                <path>book/chapter4/chapter4-3.html</path>
+            </concept>
+            <concept>
+                <number>4</number>
+                <title>Cells Originated from Their Molecular Building Blocks</title>
+                <path>book/chapter4/chapter4-4.html</path>
+            </concept>
+            <review>
+                <title>Chapter Summary</title>
+                <path>book/chapter4/chapter4-summary.html</path>
+            </review>
+        </chapter>
+    </unit>
+    <unit>
+        <number>2</number>
+        <title>Cells</title>
+        <chapter>
+            <number>5</number>
+            <title>Cells: The Working Units of Life</title>
+            <concept>
+                <title>Overview</title>
+                <path>book/chapter5/chapter5.html</path>
+            </concept>
+            <concept>
+                <number>1</number>
+                <title>Cells Are the Fundamental Units of Life</title>
+                <path>book/chapter5/chapter5-1.html</path>
+            </concept>
+            <concept>
+                <number>2</number>
+                <title>Prokaryotic Cells Are the Simplest Cells</title>
+                <path>book/chapter5/chapter5-2.html</path>
+            </concept>
+            <concept>
+                <number>3</number>
+                <title>Eukaryotic Cells Contain Organelles</title>
+                <path>book/chapter5/chapter5-3.html</path>
+            </concept>
+            <concept>
+                <number>4</number>
+                <title>Extracellular Structures Have Important Roles</title>
+                <path>book/chapter5/chapter5-4.html</path>
+            </concept>
+            <concept>
+                <number>5</number>
+                <title>Eukaryotic Cells Evolved in Several Steps</title>
+                <path>book/chapter5/chapter5-5.html</path>
+            </concept>
+            <review>
+                <title>Chapter Summary</title>
+                <path>book/chapter5/chapter5-summary.html</path>
+            </review>
+        </chapter>
+        <chapter>
+            <number>6</number>
+            <title>Cell Membranes</title>
+            <concept>
+                <title>Overview</title>
+                <path>book/chapter6/chapter6.html</path>
+            </concept>
+            <concept>
+                <number>1</number>
+                <title>Biological Membranes are Lipid-Protein Bilayers</title>
+                <path>book/chapter6/chapter6-1.html</path>
+            </concept>
+            <concept>
+                <number>2</number>
+                <title>Membrane structure results in selective permeability</title>
+                <path>book/chapter6/chapter6-2.html</path>
+            </concept>
+            <concept>
+                <number>3</number>
+                <title>Passive transport is diffusion of a substance across a membrane with no energy investment</title>
+                <path>book/chapter6/chapter6-3.html</path>
+            </concept>
+            <concept>
+                <number>4</number>
+                <title>Active transport uses energy to move solutes against their gradients</title>
+                <path>book/chapter6/chapter6-4.html</path>
+            </concept>
+            <concept>
+                <number>5</number>
+                <title>Bulk transport across the plasma membrane occurs by exocytosis and endocytosis</title>
+                <path>book/chapter6/chapter6-5.html</path>
+            </concept>
+            <review>
+                <title>Chapter Summary</title>
+                <path>book/chapter6/chapter6-summary.html</path>
+            </review>
+        </chapter>
+        <chapter>
+            <number>7</number>
+            <title>Cell Communication and Multicellularity</title>
+            <concept>
+                <title>Overview</title>
+                <path>book/chapter7/chapter7.html</path>
+            </concept>
+            <concept>
+                <number>1</number>
+                <title>Signals and Signaling Affect Cell Function</title>
+                <path>book/chapter7/chapter7-1.html</path>
+            </concept>
+            <concept>
+                <number>2</number>
+                <title>Receptors Bind Signals to Initiate a Cellular Response</title>
+                <path>book/chapter7/chapter7-2.html</path>
+            </concept>
+            <concept>
+                <number>3</number>
+                <title>The Response to a Signal Spreads through the Cell</title>
+                <path>book/chapter7/chapter7-3.html</path>
+            </concept>
+            <concept>
+                <number>4</number>
+                <title>Cells Change in Response to Signals in Several Ways</title>
+                <path>book/chapter7/chapter7-4.html</path>
+            </concept>
+            <concept>
+                <number>5</number>
+                <title>Adjacent Cells in a Multicellular Organism Can Communicate Directly</title>
+                <path>book/chapter7/chapter7-5.html</path>
+            </concept>
+            <review>
+                <title>Chapter Summary</title>
+                <path>book/chapter7/chapter7-summary.html</path>
+            </review>
+        </chapter>
+    </unit>
+    <unit>
+        <number>3</number>
+        <title>Cells and Energy</title>
+        <chapter>
+            <number>8</number>
+            <title>Energy, Enzymes and Metabolism</title>
+            <concept>
+                <title>Overview</title>
+                <path>book/chapter8/chapter8.html</path>
+            </concept>
+            <concept>
+                <number>1</number>
+                <title>Physical Principles Underlie Biological Energy Transformations</title>
+                <path>book/chapter8/chapter8-1.html</path>
+            </concept>
+            <concept>
+                <number>2</number>
+                <title>ATP Plays a Key Role in Biochemical Energetics</title>
+                <path>book/chapter8/chapter8-2.html</path>
+            </concept>
+            <concept>
+                <number>3</number>
+                <title>Enzymes Speed Up Biochemical Transformations</title>
+                <path>book/chapter8/chapter8-3.html</path>
+            </concept>
+            <concept>
+                <number>4</number>
+                <title>Enzymes Bring Substrates Together so Reactions Readily Occur</title>
+                <path>book/chapter8/chapter8-4.html</path>
+            </concept>
+            <concept>
+                <number>5</number>
+                <title>Enzyme Activities Can Be Regulated</title>
+                <path>book/chapter8/chapter8-5.html</path>
+            </concept>
+            <review>
+                <title>Chapter Summary</title>
+                <path>book/chapter8/chapter8-summary.html</path>
+            </review>
+        </chapter>
+        <chapter>
+            <number>9</number>
+            <title>Pathways that Harvest Chemical Energy</title>
+            <concept>
+                <title>Overview</title>
+                <path>book/chapter9/chapter9.html</path>
+            </concept>
+            <concept>
+                <number>1</number>
+                <title>Cells Harvest Chemical Energy from Glucose Oxidation</title>
+                <path>book/chapter9/chapter9-1.html</path>
+            </concept>
+            <concept>
+                <number>2</number>
+                <title>In the Presence of Oxygen, Glucose Is Fully Oxidized</title>
+                <path>book/chapter9/chapter9-2.html</path>
+            </concept>
+            <concept>
+                <number>3</number>
+                <title>Oxidative Phosphorylation Forms ATP</title>
+                <path>book/chapter9/chapter9-3.html</path>
+            </concept>
+            <concept>
+                <number>4</number>
+                <title>In the Absence of Oxygen, Some Energy Is Harvested from Glucose</title>
+                <path>book/chapter9/chapter9-4.html</path>
+            </concept>
+            <concept>
+                <number>5</number>
+                <title>Metabolic Pathways Are Interrelated and Regulated</title>
+                <path>book/chapter9/chapter9-5.html</path>
+            </concept>
+            <review>
+                <title>Chapter Summary</title>
+                <path>book/chapter9/chapter9-summary.html</path>
+            </review>
+        </chapter>
+        <chapter>
+            <number>10</number>
+            <title>Photosynthesis: Energy from Sunlight</title>
+            <concept>
+                <title>Overview</title>
+                <path>book/chapter10/chapter10.html</path>
+            </concept>
+            <concept>
+                <number>1</number>
+                <title>Photosynthesis Uses Light to Make Carbohydrate</title>
+                <path>book/chapter10/chapter10-1.html</path>
+            </concept>
+            <concept>
+                <number>2</number>
+                <title>Photosynthesis Converts Light Energy into Chemical Energy</title>
+                <path>book/chapter10/chapter10-2.html</path>
+            </concept>
+            <concept>
+                <number>3</number>
+                <title>Chemical Energy Trapped in Photosynthesis Is Used to Synthesize Carbohydrates</title>
+                <path>book/chapter10/chapter10-3.html</path>
+            </concept>
+            <concept>
+                <number>4</number>
+                <title>Plants Have Adapted Photosynthesis to Environmental Conditions</title>
+                <path>book/chapter10/chapter10-4.html</path>
+            </concept>
+            <concept>
+                <number>5</number>
+                <title>Photosynthesis Is an Integral Part of Plant Metabolism</title>
+                <path>book/chapter10/chapter10-5.html</path>
+            </concept>
+            <review>
+                <title>Chapter Summary</title>
+                <path>book/chapter10/chapter10-summary.html</path>
+            </review>
+        </chapter>
+    </unit>
+    <unit>
+        <number>4</number>
+        <title>Genes and Heredity</title>
+        <chapter>
+            <number>11</number>
+            <title>The Cell Cycle and Cell Division</title>
+            <concept>
+                <title>Overview</title>
+                <path>book/chapter11/chapter11.html</path>
+            </concept>
+            <concept>
+                <number>1</number>
+                <title>All Cells Derive from Other Cells</title>
+                <path>book/chapter11/chapter11-1.html</path>
+            </concept>
+            <concept>
+                <number>2</number>
+                <title>The Eukaryotic Cell Division Cycle Is Regulated</title>
+                <path>book/chapter11/chapter11-2.html</path>
+            </concept>
+            <concept>
+                <number>3</number>
+                <title>Eukaryotic Cells Divide by Mitosis</title>
+                <path>book/chapter11/chapter11-3.html</path>
+            </concept>
+            <concept>
+                <number>4</number>
+                <title>Cell Division Plays Important Roles in the Sexual Life Cycle</title>
+                <path>book/chapter11/chapter11-4.html</path>
+            </concept>
+            <concept>
+                <number>5</number>
+                <title>Meiosis Leads to the Formation of Gametes</title>
+                <path>book/chapter11/chapter11-5.html</path>
+            </concept>
+            <concept>
+                <number>6</number>
+                <title>Cell Death Is Important in Living Organisms</title>
+                <path>book/chapter11/chapter11-6.html</path>
+            </concept>
+            <concept>
+                <number>5</number>
+                <title>Unregulated Cell Division Can Lead to Cancer</title>
+                <path>book/chapter11/chapter11-7.html</path>
+            </concept>
+            <review>
+                <title>Chapter Summary</title>
+                <path>book/chapter11/chapter11-summary.html</path>
+            </review>
+        </chapter>
+    </unit>
+</book>
