@@ -9,7 +9,6 @@
 
 - (NSURL *)absoluteURLWithoutFragment {
     return [NSURL URLWithString: [[self absoluteStringWithoutFragment] stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLFragmentAllowedCharacterSet]]];
-   
 }
 
 - (NSString *)relativePathWithFragment {
